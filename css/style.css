@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+/*==========
+DEFAULTS
+=========*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1, h2, h3 {
+  color: #4c4e61;
+}
+
+/*==========
+LAYOUT
+=========*/
+header {
+  margin-top: 5em;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+
+header h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+header p {
+  font-weight: 400;
+  color: #a3a5ae;
+  margin-top: 1em;
+}
+
+main {
+  width: 80%;
+  max-width: 300px;
+  margin-top: 4em;
+  display: -ms-grid;
+  display: grid;
+  row-gap: 2em;
+}
+
+main .card {
+  background: #fff;
+  -webkit-box-shadow: 5px 5px 25px #bababa;
+          box-shadow: 5px 5px 25px #bababa;
+  border-top: 5px solid transparent;
+  border-radius: 7px;
+  padding: 2em;
+}
+
+main .card h3 {
+  margin-bottom: 0.3em;
+  font-size: 1.2rem;
+}
+
+main .card p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.7em;
+  color: #a3a5ae;
+}
+
+main .card .icon {
+  margin-top: 2em;
+  text-align: right;
+}
+
+main .card.super {
+  border-top-color: #45d3d3;
+}
+
+main .card.team {
+  border-top-color: #ea5353;
+}
+
+main .card.karma {
+  border-top-color: #fcaf4a;
+}
+
+main .card.calc {
+  border-top-color: #549ef2;
+}
+
+footer {
+  margin-top: 2em;
+  padding: 2em 0.5em;
+}
+
+/*==========
+DESKTOP
+=========*/
+@media only screen and (min-width: 800px) {
+  header, main {
+    max-width: none;
+  }
+  header {
+    width: 37%;
+  }
+  main {
+    width: 90%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-gap: 2.2em;
+        grid-template-areas: "s t" "k c";
+  }
+  main .card {
+    width: 350px;
+  }
+  main .card.super {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: s;
+  }
+  main .card.team {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: t;
+  }
+  main .card.karma {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: k;
+  }
+  main .card.calc {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: c;
+  }
+}
+
+/*==========
+BIG DESKTOP
+=========*/
+@media only screen and (min-width: 1200px) {
+  main {
+        grid-template-areas: ". t ." "s t c" "s k c" ". k .";
+  }
+}
+/*# sourceMappingURL=style.css.map */
