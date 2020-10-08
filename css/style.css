@@ -37,7 +37,7 @@ h1, h2, h3 {
 LAYOUT
 =========*/
 header {
-  margin-top: 5em;
+  margin-top: 6em;
   width: 80%;
   max-width: 300px;
   text-align: center;
@@ -72,7 +72,7 @@ main .card {
   background: #fff;
   -webkit-box-shadow: 5px 5px 25px #bababa;
           box-shadow: 5px 5px 25px #bababa;
-  border-top: 5px solid transparent;
+  border-top: 4px solid transparent;
   border-radius: 7px;
   padding: 2em;
 }
@@ -122,8 +122,13 @@ DESKTOP
   header, main {
     max-width: none;
   }
-  header {
-    width: 37%;
+  header h1, header h2 {
+    font-size: 2.2rem;
+  }
+  header p {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
   main {
     width: 90%;
@@ -131,7 +136,7 @@ DESKTOP
         -ms-flex-pack: center;
             justify-content: center;
     grid-gap: 2.2em;
-        grid-template-areas: "s t" "k c";
+        grid-template-areas: "s t" "k c";
   }
   main .card {
     width: 350px;
@@ -162,8 +167,11 @@ DESKTOP
 BIG DESKTOP
 =========*/
 @media only screen and (min-width: 1200px) {
+  header p {
+    width: 45%;
+  }
   main {
-        grid-template-areas: ". t ." "s t c" "s k c" ". k .";
+        grid-template-areas: ". t ." "s t c" "s k c" ". k .";
   }
 }
 /*# sourceMappingURL=style.css.map */
